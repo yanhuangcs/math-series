@@ -14,4 +14,10 @@ def lucas(n):
 
 
 def sum_series(n, a=0, b=1):
-    pass
+    if n == 0:
+        return a
+    if n == 1:
+        return b
+    if n > 1:
+        return sum_series(n - 1, a, b) + sum_series(n - 2, a, b)
+    return

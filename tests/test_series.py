@@ -78,14 +78,91 @@ def test_luc_three():
     assert actual == expected
 
 
-def test_fib_20():
+def test_luc_20():
     actual = lucas(20)
     expected = 15127
     assert actual == expected
 
 
-""" unit tests for sum_series function."""
+""" unit tests for sum_series function with default parameters same as fibonacci series."""
 
 
 def test_sumseries_zero():
-    pass
+    actual = sum_series(0)
+    expected = 0
+    assert actual == expected
+
+
+def test_sumseries_one():
+    actual = sum_series(1)
+    expected = 1
+    assert actual == expected
+
+
+def test_sumseries_two():
+    actual = sum_series(2)
+    expected = 1
+    assert actual == expected
+
+
+def test_sumseries_three():
+    actual = sum_series(3)
+    expected = 2
+    assert actual == expected
+
+
+def test_sumseries_four():
+    actual = sum_series(4)
+    expected = 3
+    assert actual == expected
+
+
+def test_sumseries_five():
+    actual = sum_series(5)
+    expected = 5
+    assert actual == expected
+
+
+def test_sumseries_20():
+    actual = sum_series(20)
+    expected = 6765
+    assert actual == expected
+
+
+"""unit test for sum_series with input parameters same as lucas series"""
+
+
+def test_sumseries_zero_luc():
+    actual = sum_series(0, 2, 1)
+    expected = 2
+    assert actual == expected
+
+
+def test_sumseries_luc():
+    actual = sum_series(1, 2, 1)
+    expected = 1
+    assert actual == expected
+
+
+def test_sumseries_luc():
+    actual = sum_series(2, 2, 1)
+    expected = 3
+    assert actual == expected
+
+
+def test_sumseries_luc():
+    actual = sum_series(3, 2, 1)
+    expected = 4
+    assert actual == expected
+
+
+def test_sumseries_luc():
+    actual = sum_series(4, 2, 1)
+    expected = 7
+    assert actual == expected
+
+
+def test_sumseries_20_luc():
+    actual = sum_series(20, 2, 1)
+    expected = 15127
+    assert actual == expected
